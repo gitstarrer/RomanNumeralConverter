@@ -27,4 +27,10 @@ struct RomanNumeralConverterTests {
         let sut = RomanNumeral()
         #expect(sut.convertToRoman(3) == "III")
     }
+    
+    @Test("converts 4 to IV")
+    func convert_converts4ToIV() async throws {
+        let sut = RomanNumeral()
+        #expect(sut.convertToRoman(4) == "IV")
+    }
 }
