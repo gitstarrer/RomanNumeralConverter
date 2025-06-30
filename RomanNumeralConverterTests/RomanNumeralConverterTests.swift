@@ -33,4 +33,16 @@ struct RomanNumeralConverterTests {
         let sut = RomanNumeral()
         #expect(sut.convertToRoman(4) == "IV")
     }
+    
+    @Test("converts 5 to V")
+    func convert_converts5ToV() async throws {
+        let sut = RomanNumeral()
+        #expect(sut.convertToRoman(5) == "V")
+    }
+    
+    @Test("6 to VI")
+    func convert_converts6ToVI() async throws {
+        let sut = RomanNumeral()
+        #expect(sut.convertToRoman(6) == "VI")
+    }
 }

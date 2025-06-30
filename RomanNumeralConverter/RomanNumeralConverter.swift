@@ -8,18 +8,21 @@
 import Foundation
 
 struct RomanNumeral {
-    
+    let romanMap: [(Int, String)] = [
+        (5, "V"),
+        (4, "IV"),
+        (1, "I"),
+    ]
+
     func convertToRoman(_ num: Int) -> String {
         var result: String = ""
         var integerNum = num
         
-        if integerNum == 4 {
-            return "IV"
-        }
-        
-        for _ in 1...integerNum {
-            result += "I"
-            integerNum -= 1
+        for (int, roman) in romanMap {
+            while integerNum >= int {
+                result += roman
+                integerNum -= int
+            }
         }
         return result
     }
