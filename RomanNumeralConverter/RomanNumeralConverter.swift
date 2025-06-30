@@ -10,10 +10,12 @@ import Foundation
 struct RomanNumeral {
     
     func convertToRoman(_ num: Int) -> String {
-        if num == 1 {
-            return "I"
-        } else {
-            return "II"
+        var result: String = ""
+        var integerNum = num
+        for _ in 1...integerNum {
+            result += "I"
+            integerNum -= 1
         }
+        return result
     }
 }

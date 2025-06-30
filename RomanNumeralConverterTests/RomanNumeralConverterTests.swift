@@ -22,4 +22,9 @@ struct RomanNumeralConverterTests {
         #expect(sut.convertToRoman(2) == "II")
     }
 
+    @Test("converts 3 to III")
+    func convert_converts3ToIII() async throws {
+        let sut = RomanNumeral()
+        #expect(sut.convertToRoman(3) == "III")
+    }
 }
