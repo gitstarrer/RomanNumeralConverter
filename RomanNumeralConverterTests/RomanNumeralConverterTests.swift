@@ -15,5 +15,11 @@ struct RomanNumeralConverterTests {
         let sut = RomanNumeral()
         #expect(sut.convertToRoman(1) == "I")
     }
+    
+    @Test("converts 2 to II")
+    func convert_converts2ToII() async throws {
+        let sut = RomanNumeral()
+        #expect(sut.convertToRoman(2) == "II")
+    }
 
 }
