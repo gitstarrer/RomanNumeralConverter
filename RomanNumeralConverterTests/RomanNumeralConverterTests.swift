@@ -45,4 +45,27 @@ struct RomanNumeralConverterTests {
         let sut = RomanNumeral()
         #expect(sut.convertToRoman(6) == "VI")
     }
+    
+    @Test("9 to IX")
+    func convert_converts9ToIX() async throws {
+        let sut = RomanNumeral()
+        #expect(sut.convertToRoman(9) == "IX")
+    }
+    
+    @Test("10 to X")
+    func convert_converts10ToX() async throws {
+        let sut = RomanNumeral()
+        #expect(sut.convertToRoman(10) == "X")
+    }
+    
+    @Test("Numbers 10 - 100")
+    func convert_numbersGreaterThan10() async throws {
+        let sut = RomanNumeral()
+        #expect(sut.convertToRoman(14) == "XIV")
+        #expect(sut.convertToRoman(19) == "XIX")
+        #expect(sut.convertToRoman(20) == "XX")
+        #expect(sut.convertToRoman(40) == "XL")
+        #expect(sut.convertToRoman(49) == "XLIX")
+        #expect(sut.convertToRoman(90) == "XC")
+    }
 }
