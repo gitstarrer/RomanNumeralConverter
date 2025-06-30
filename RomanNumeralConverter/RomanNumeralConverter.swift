@@ -7,3 +7,9 @@
 
 import Foundation
 
+struct RomanNumeral {
+    
+    func convertToRoman(_ num: Int) -> String {
+        return "I"
+    }
+}

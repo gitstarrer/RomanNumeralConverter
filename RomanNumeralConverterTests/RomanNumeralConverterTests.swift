@@ -10,8 +10,10 @@ import Testing
 
 struct RomanNumeralConverterTests {
 
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    @Test("converts 1 to I")
+    func convert_converts1ToI() async throws {
+        let sut = RomanNumeral()
+        #expect(sut.convertToRoman(1) == "I")
     }
 
 }
