@@ -68,4 +68,14 @@ struct RomanNumeralConverterTests {
         #expect(sut.convertToRoman(49) == "XLIX")
         #expect(sut.convertToRoman(90) == "XC")
     }
+    
+    @Test("Numbers 101 - 1000")
+    func convert_numbersGreaterThan100() async throws {
+        let sut = RomanNumeral()
+        #expect(sut.convertToRoman(101) == "CI")
+        #expect(sut.convertToRoman(400) == "CD")
+        #expect(sut.convertToRoman(900) == "CM")
+        #expect(sut.convertToRoman(944) == "CMXLIV")
+        #expect(sut.convertToRoman(3999) == "MMMCMXCIX")
+    }
 }
